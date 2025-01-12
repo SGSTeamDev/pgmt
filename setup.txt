@@ -1,0 +1,25 @@
+GRANT ALL PRIVILEGES ON DATABASE pgmt_db TO pgmt_user;
+GRANT ALL ON SCHEMA public TO pgmt_user;
+
+sudo nano /etc/apache2/sites-available/projects.specialmansolution.com.conf
+
+<VirtualHost *:80>
+    ServerName projects.specialmansolution.com
+
+    ProxyPreserveHost On
+
+    ProxyPass / http://127.0.0.1:1107/
+    ProxyPassReverse / http://127.0.0.1:1107/
+
+</VirtualHost>
+
+sudo a2ensite projects.specialmansolution.com
+
+sudo apachectl configtest
+
+sudo systemctl reload apache2
+
+sudo systemctl restart apache2
+
+
+sudo certbot -d projects.specialmansolution.com
