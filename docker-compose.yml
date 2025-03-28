@@ -24,7 +24,7 @@ x-op-app: &app
     # set to true to enable the email receiving feature. See ./docker/cron for more options
     IMAP_ENABLED: "${IMAP_ENABLED:-false}"
   volumes:
-    - "${OPDATA:-opdata}:/var/openproject/assets"
+    - "opdata:/var/openproject/assets"
   #  - /root/app/files/openproject/enterprise_token.rb:/app/app/models/enterprise_token.rb:ro
 
 
