@@ -26,4 +26,4 @@ sudo certbot -d projects.specialmansolution.com
 
 
 GRANT ALL PRIVILEGES ON DATABASE openpj TO pgmt_user;
-GRANT ALL ON SCHEMA public TO openproject;
+GRANT ALL ON SCHEMA public TO pgmt_user;
