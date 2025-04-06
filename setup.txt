@@ -23,3 +23,7 @@ sudo systemctl restart apache2
 
 
 sudo certbot -d projects.specialmansolution.com
+
+
+GRANT ALL PRIVILEGES ON DATABASE openpj TO pgmt_user;
+GRANT ALL ON SCHEMA public TO openproject;
